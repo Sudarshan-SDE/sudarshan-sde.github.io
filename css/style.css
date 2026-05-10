@@ -123,20 +123,26 @@ nav a:hover::after {
 }
 
 .typing-text-designation {
-    display: inline-block;
+    /* display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-
     border-right: 3px solid #7c3aed;
-
-    width: max-content;   /* 👈 important fix */
-
+    width: max-content;
     animation:
         typing 5s steps(30, end) forwards,
         blink 0.8s infinite;
-
+    color: #7c3aed;
+    font-weight: 600; */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #7c3aed;
     color: #7c3aed;
     font-weight: 600;
+    /* keep cursor blinking */
+    animation:
+        typing 5s steps(30, end) forwards,
+        blink 0.8s infinite;
 }
 
 /* Typing */
@@ -311,20 +317,31 @@ nav a:hover::after {
     transform: scale(1.15) rotate(-5deg);
 }
 
-#contact .contact-info h1{
+/* #contact .contact-info h1{
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 5px;
-}
+} */
 
 #contact .contact-info h2{
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 2rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-item .icon{
+        width: 50px !important;
+    }
+    .contact-info h2{
+        font-size: 15px !important;
+    }
+    .contact-info h6{
+        font-size: 12px !important;
+    }
+}
 
 
 
@@ -335,7 +352,6 @@ nav a:hover::after {
 }
 
 .contact-section .section-title {
-    font-weight: 700;
     margin-bottom: 0.5rem;
     color: #ddd;
 }
@@ -369,8 +385,8 @@ nav a:hover::after {
     background: #ff4500;
     border: none;
     padding: 12px 30px;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    border-radius: 20px;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -382,7 +398,21 @@ nav a:hover::after {
 /* Responsive */
 @media (max-width: 768px) {
     .contact-section .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    .contact-section .btn-primary {
+        width: 40%;
+        padding: 10px;
+        font-size: 12px;
+    }
+    #contactForm label{
+        font-size: 12px;
+    }
+    #contactForm #name, #email, #message{
+        font-size: 12px;
+    }
+    #footer p{
+        font-size: 12px;
     }
 }
 
