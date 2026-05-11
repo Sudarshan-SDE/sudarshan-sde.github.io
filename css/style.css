@@ -11,6 +11,49 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+/* Small center dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #00aaff;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10001;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* Outer glow circle */
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 170, 255, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.08s ease-out;
+
+  box-shadow:
+    0 0 10px rgba(0, 170, 255, 0.6),
+    0 0 20px rgba(0, 170, 255, 0.4),
+    0 0 40px rgba(0, 170, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
 }
 
 /* Header */
@@ -42,6 +85,7 @@ nav a {
     text-decoration: none;
     transition: 0.3s;
     position: relative;
+    font-size: 14px;
 }
 
 nav a::after {
