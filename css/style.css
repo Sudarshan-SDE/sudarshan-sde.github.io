@@ -69,22 +69,23 @@ nav a:hover::after {
 @media (max-width: 768px) {
 
     header {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
 
     .navbar-custom {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 14px;
     }
 
     nav {
         flex-direction: column;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     nav a {
-        padding: 8px 0;
+        padding: 5px 0;
         width: 100%;
         border-top: 1px solid #222;
     }
@@ -168,6 +169,18 @@ nav a:hover::after {
 }
 
 
+/* Responsive About Me*/
+@media (max-width: 768px) {
+    .hero-content p{
+        font-size: 15px !important;
+    }
+    .hero-content a{
+        font-size: 12px !important;
+    }
+}
+
+
+
 
 
 /* About Section */
@@ -178,6 +191,7 @@ nav a:hover::after {
 .about-section p {
     text-align: justify;
     line-height: 1.6;
+    font-size: 14px;
 }
 
 .about-img-frame {
@@ -265,15 +279,33 @@ nav a:hover::after {
     }
 
 
-    /* career profile */
-     .career-profile .profile-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
-    }
+/* career profile */
+.career-profile .profile-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+.career-profile .profile-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+}
 
-    .career-profile .profile-item:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+/* Responsive About Me*/
+@media (max-width: 768px) {
+    .about-section h3{
+        font-size: 20px !important;
     }
+    .about-section h5{
+        font-size: 18px !important;
+    }
+    .about-section h6{
+        font-size: 14px !important;
+    }
+    .about-section p{
+        font-size: 13px !important;
+    }
+     .about-section .tech-badge{
+        font-size: 14px !important;
+    }
+}
 
 
 
