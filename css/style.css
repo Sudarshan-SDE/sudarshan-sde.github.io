@@ -151,7 +151,7 @@ nav a:hover::after {
     align-items: center;
     text-align: center;
     /* background: linear-gradient(to right, #0d1117, #161b22); */
-    background: linear-gradient(to right, #000000, #020750); /* dark red */
+    background: linear-gradient(to right, #000000, #780a40); /* dark red */
     /* background: linear-gradient(to right, #000000, #1a1aff); dark blue */
     /* background-image: linear-gradient(60deg, #8b0000 0%, #485563 50%, #1a1aff 100%); */
     color: white;
