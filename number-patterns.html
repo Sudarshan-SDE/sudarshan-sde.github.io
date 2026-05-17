@@ -38,15 +38,48 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-       
-        <p>
-          Work in Progress <br> <progress>progress</progress>
-        </p>
+    <!-- Number Pattern Card -->
+    <section class="star-patterns-section container my-5">
+      <h2 class="text-center mb-4">Number Patterns (C#)</h2>
 
+      <!-- Pattern Card 1: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        for (int i = 1; i <= 5; i++) 
+        {
+            for (int j = 1; j <= 5; j++) 
+            {
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+          </pre>
+        </div>
       </div>
+
     </section>
 
     <!-- Footer Section -->
