@@ -38,15 +38,47 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-       
-        <p>
-          Work in Progress <br> <progress>progress</progress>
-        </p>
+    <!-- Array Programs Card -->
+    <section class="star-patterns-section container my-5">
+      <h2 class="text-center mb-4">Array Programs (C#)</h2>
 
+      <!-- Pattern Card 1: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = {10, 20, 30, 40, 50};
+          
+        // Reverse the array
+        Array.Reverse(arr);
+          
+        // Print the reversed array
+        foreach (int num in arr)
+        {
+          Console.Write(num + " ");
+        }
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+50 40 30 20 10
+          </pre>
+        </div>
       </div>
+
+
     </section>
 
     <!-- Footer Section -->
