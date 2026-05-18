@@ -15,6 +15,188 @@ body {
     cursor: none;
 }
 
+
+/* ================= PRELOADER START ================= */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a, #111827);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+/* Container */
+.loader-container {
+    text-align: center;
+}
+
+/* Animated Name */
+.brand-name {
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+}
+
+.brand-name span {
+    display: inline-block;
+    color: #38bdf8;
+    animation: glowUp 1.5s infinite;
+}
+
+/* Delay each letter */
+.brand-name span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.brand-name span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.brand-name span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.brand-name span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.brand-name span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.brand-name span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.brand-name span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.brand-name span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.brand-name span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+/* Glow Animation */
+@keyframes glowUp {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+        text-shadow: 0 0 5px #38bdf8;
+    }
+
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+        text-shadow:
+            0 0 10px #38bdf8,
+            0 0 20px #38bdf8,
+            0 0 40px #38bdf8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+        text-shadow: 0 0 5px #38bdf8;
+    }
+}
+
+/* Loading Bar */
+.loading-bar {
+    width: 320px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #06b6d4, #38bdf8, #0ea5e9);
+    border-radius: 50px;
+    animation: loading 2s ease-in-out infinite;
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 80%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Subtitle */
+.loading-text {
+    margin-top: 20px;
+    color: #cbd5e1;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: fadeText 2s infinite alternate;
+}
+
+@keyframes fadeText {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hide Animation */
+#preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .loading-bar {
+        width: 190px;
+    }
+
+    .loading-text {
+        font-size: 12px;
+    }
+}
+
+
+/* ================= PRELOADER END ================= */
+
+
+
+
+
+
+/* ================= CURSOR START ================= */
 /* Small center dot */
 .cursor-dot {
     width: 8px;
@@ -56,6 +238,11 @@ body {
         cursor: auto;
     }
 }
+
+/* ================= CURSOR END ================= */
+
+
+
 
 /* Header */
 header {
@@ -235,11 +422,7 @@ nav a:hover::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background: linear-gradient(to right, #0d1117, #161b22); */
     background: linear-gradient(to right, #000000, #780a40);
-    /* dark red */
-    /* background: linear-gradient(to right, #000000, #1a1aff); dark blue */
-    /* background-image: linear-gradient(60deg, #8b0000 0%, #485563 50%, #1a1aff 100%); */
     color: white;
     padding: 30px;
 }
@@ -254,16 +437,6 @@ nav a:hover::after {
 }
 
 .typing-text-designation {
-    /* display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #7c3aed;
-    width: max-content;
-    animation:
-        typing 5s steps(30, end) forwards,
-        blink 0.8s infinite;
-    color: #7c3aed;
-    font-weight: 600; */
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
