@@ -39,3 +39,18 @@ function eraseTitle() {
 
 // Start the animation
 typeTitle();
+
+
+
+
+
+
+
+// PRELOADER
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 2500);
+});
