@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sudarshan Sharma - Full Stack .NET Developer</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+ <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header Section -->
+    <header>
+      <div class="navbar-custom">
+        <div class="logo">Portfolio</div>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <button class="dropbtn">
+              Programming ▼
+            </button>
+
+            <div class="dropdown-content">
+              <a href="star-patterns.html">Star Patterns</a>
+              <a href="number-patterns.html">Number Patterns</a>
+              <a href="array-programs.html">Array Programs</a>
+              <a href="dsa-programs.html">DSA Programs</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- String Programs Card -->
+    <section class="star-patterns-section container my-5">
+      <h2 class="text-center mb-4">String Programs (C#)</h2>
+
+      
+      <!-- Reverse String Card 1: using Method -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 1 (Reverse the string ->  Using For Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        string words = "Sudarshan Sharma";
+        string reversed = "";
+
+        for (int i = words.Length - 1; i >= 0; i--)
+        {
+            reversed = reversed + words[i];
+        }
+        Console.WriteLine(reversed);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+amrahS nahsraduS
+          </pre>
+        </div>
+      </div>
+     
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="footer container text-center">
+        <!-- Social Icons -->
+        <div class="social-icon mb-3">
+          <div class="social-item">
+            <a href="#">
+              <img src="./img/facebook.png" alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="./img/instagram-logo.png" alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="./img/github-logo.png" alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="./img/youtube-logo.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p>Copyright © 2026 All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/cursor.js"></script>
+  </body>
+
+</html>
