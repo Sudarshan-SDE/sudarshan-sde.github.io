@@ -345,40 +345,6 @@ nav a:hover::after {
     display: block;
 }
 
-/* Mobile Responsive */
-/* @media (max-width: 768px) {
-
-    header {
-        padding: 10px 20px;
-    }
-
-    .navbar-custom {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 14px;
-    }
-
-    nav {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 5px;
-    }
-
-    nav a {
-        padding: 5px 0;
-        width: 100%;
-        border-top: 1px solid #222;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-} */
-
 @media (max-width: 768px) {
 
     header {
@@ -427,11 +393,6 @@ nav a:hover::after {
     padding: 30px;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
 .highlight-name {
     color: orange;
 }
@@ -442,7 +403,7 @@ nav a:hover::after {
     white-space: nowrap;
     border-right: 3px solid #7c3aed;
     color: #7c3aed;
-    font-weight: 600;
+    font-weight: 500;
     /* keep cursor blinking */
     animation:
         typing 5s steps(30, end) forwards,
@@ -468,7 +429,7 @@ nav a:hover::after {
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 25px;
 }
 
