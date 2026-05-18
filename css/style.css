@@ -615,7 +615,7 @@ nav a:hover::after {
 }
 
 #contact .icon {
-    width: 70px;
+    width: 55px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -644,9 +644,10 @@ nav a:hover::after {
     color: #ddd;
 }
 
-.contact-section p {
-    font-size: 1rem;
-    color: #ddd;
+#contactForm label,
+#contactForm input,
+#contactForm textarea {
+    font-size: 14px;
 }
 
 .contact-section .form-control {
@@ -672,9 +673,8 @@ nav a:hover::after {
 .contact-section .btn-primary {
     background: #ff4500;
     border: none;
-    padding: 12px 30px;
+    padding: 10px 20px;
     border-radius: 20px;
-    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
