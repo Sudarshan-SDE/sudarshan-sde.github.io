@@ -42,11 +42,12 @@
     <section class="star-patterns-section container my-5">
       <h2 class="text-center mb-4">Array Programs (C#)</h2>
 
-      <!-- Pattern Card 1: -->
+      
+      <!-- Reverse Array Card 1: using Reverse Method -->
       <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
         <!-- Left side: Code -->
         <div class="star-pattern-code flex-fill p-3">
-          <h5>Code</h5>
+          <h5>Code: 1 (Reverse the array ->  Using Reverse Method)</h5>
           <pre>
             <code>
 using System;
@@ -59,10 +60,45 @@ class Program {
         Array.Reverse(arr);
           
         // Print the reversed array
-        foreach (int num in arr)
+        foreach (int i in arr)
         {
-          Console.Write(num + " ");
+          Console.Write(i + " ");
         }
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+50 40 30 20 10
+          </pre>
+        </div>
+      </div>
+
+      <!-- Reverse Array Card 2: using For Loop -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 2 (Reverse the array -> Using For Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        
+        Console.WriteLine("Reverse Array");
+        
+        for (int i = arr.Length - 1; i >= 0; i--)
+        {
+          Console.Write(arr[i] + " ");
+        }
+        Console.WriteLine();
     }
 }
             </code>
