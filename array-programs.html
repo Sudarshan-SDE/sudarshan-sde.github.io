@@ -92,8 +92,6 @@ class Program {
     static void Main() {
         int[] arr = { 10, 20, 30, 40, 50 };
         
-        Console.WriteLine("Reverse Array");
-        
         for (int i = arr.Length - 1; i >= 0; i--)
         {
           Console.Write(arr[i] + " ");
@@ -110,6 +108,142 @@ class Program {
           <h5>Output</h5>
           <pre>
 50 40 30 20 10
+          </pre>
+        </div>
+      </div>
+
+      <!-- Find Max Element Card 3: using Method -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 3 (Find Max Element -> Using Method)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = { 52, 36, 95, 78 };
+        
+        int max = arr.Max();
+        Console.WriteLine(max);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+95
+          </pre>
+        </div>
+      </div>
+
+      <!-- Find Max Element Card 4: using Foreach Loop -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 4 (Find Max Element -> Using Foreach Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = { 52, 36, 95, 78 };
+
+        int max = arr[0];
+
+        foreach (int i in arr)
+        {
+            if (i > max)
+            {
+                max = i;
+            }
+        }
+        Console.WriteLine(max);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+95
+          </pre>
+        </div>
+      </div>
+
+      <!-- Find Min Element Card 5: using Method -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 5 (Find Min Element -> Using Method)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = { 71, 11, 31, 42 };
+
+        int min = arr.Min();
+        Console.WriteLine(min);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+11
+          </pre>
+        </div>
+      </div>
+
+      <!-- Find Min Element Card 6: using Foreach Loop -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 6 (Find Min Element -> Using Foreach Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        int[] arr = { 71, 11, 31, 42 };
+
+        int min = arr[0];
+
+        foreach (int i in arr)
+        {
+            if (i < min)
+            {
+                min = i;
+            }
+        }
+        Console.WriteLine(min);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+11
           </pre>
         </div>
       </div>
