@@ -48,7 +48,7 @@
       <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
         <!-- Left side: Code -->
         <div class="star-pattern-code flex-fill p-3">
-          <h5>Code: 1 (Reverse the string ->  Using For Loop)</h5>
+          <h5>Code: 1 (Reverse the Predefined string ->  Using For Loop)</h5>
           <pre>
             <code>
 using System;
@@ -73,7 +73,43 @@ class Program {
         <div class="star-pattern-output flex-fill p-3 rounded">
           <h5>Output</h5>
           <pre>
-amrahS nahsraduS
+Reversed String: amrahS nahsraduS
+          </pre>
+        </div>
+      </div>
+
+      <!-- Reverse String Card 2: using Method -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code: 2 (Reverse the User input string ->  Using For Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        Console.Write("Enter the string: ");
+        string words = Console.ReadLine();
+        string reversed = "";
+
+        for (int i = words.Length - 1; i >= 0; i--)
+        {
+            reversed = reversed + words[i];
+        }
+        Console.WriteLine("Reversed String: "+reversed);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+Enter the string: Sudarshan Sharma
+Reversed String: amrahS nahsraduS
           </pre>
         </div>
       </div>
