@@ -54,14 +54,14 @@ using System;
 
 class Program {
     static void Main() {
-        for (int i = 1; i <= 5; i++) 
-        {
-            for (int j = 1; j <= 5; j++) 
+        for (int i = 1; i <= 5; i++)
             {
-                Console.Write("* ");
+                for (int j = 1; j <= 5; j++)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine(" ");
             }
-            Console.WriteLine();
-        }
     }
 }
             </code>
@@ -72,11 +72,11 @@ class Program {
         <div class="star-pattern-output flex-fill p-3 rounded">
           <h5>Output</h5>
           <pre>
-* * * * *
-* * * * *
-* * * * *
-* * * * *
-* * * * *
+1 1 1 1 1
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
           </pre>
         </div>
       </div>
