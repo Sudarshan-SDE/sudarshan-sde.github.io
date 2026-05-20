@@ -1,0 +1,50 @@
+.documents-section {
+    background: #0f172a;
+    min-height: 100vh;
+    color: white;
+}
+
+.doc-title {
+    color: #7c3aed;
+}
+
+.doc-subtitle {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+.doc-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(36, 30, 30, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.doc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3);
+}
+
+.doc-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.doc-card h4 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+}
+
+.doc-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.doc-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
