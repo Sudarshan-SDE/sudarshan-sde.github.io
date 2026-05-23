@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudarshan Sharma - Full Stack .NET Developer</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/asp-net.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header Section -->
+    <div id="header"></div>
+
+    <!-- ASP.NET Study Notes Section -->
+    <section id="asp-net-study-notes" class="asp-container">
+
+      <!-- Left Sidebar -->
+      <aside class="asp-sidebar">
+        <h4>ASP.NET Topics</h4>
+        <ul id="asp-nav">
+          <li><a href="#intro" class="active">Introduction</a></li>
+          <li><a href="#mvc">ASP.NET MVC</a></li>
+          <li><a href="#core">ASP.NET Core</a></li>
+          <li><a href="#routing">Routing</a></li>
+          <li><a href="#middleware">Middleware</a></li>
+          <li><a href="#webapi">Web API</a></li>
+          <li><a href="#efcore">Entity Framework Core</a></li>
+          <li><a href="#auth">Authentication</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Content -->
+      <div class="asp-content" id="asp-content">
+
+        <div id="intro" class="note-card">
+          <h2>Introduction to ASP.NET</h2>
+          <p>ASP.NET is a web development framework by Microsoft used to build dynamic web applications, APIs, and enterprise systems using C#.</p>
+        </div>
+
+        <div id="mvc" class="note-card">
+          <h2>ASP.NET MVC</h2>
+          <p>MVC stands for Model-View-Controller. It separates application logic into three components for better structure and maintainability.</p>
+        </div>
+
+        <div id="core" class="note-card">
+          <h2>ASP.NET Core</h2>
+          <p>ASP.NET Core is a cross-platform, high-performance framework for building modern web apps and APIs.</p>
+        </div>
+
+        <div id="routing" class="note-card">
+          <h2>Routing</h2>
+          <p>Routing maps URLs to controllers and actions in ASP.NET applications.</p>
+        </div>
+
+        <div id="middleware" class="note-card">
+          <h2>Middleware</h2>
+          <p>Middleware is a pipeline component that handles requests and responses in ASP.NET Core.</p>
+        </div>
+
+        <div id="webapi" class="note-card">
+          <h2>Web API</h2>
+          <p>ASP.NET Core Web API lets you build RESTful HTTP services with automatic model validation.</p>
+        </div>
+
+        <div id="efcore" class="note-card">
+          <h2>Entity Framework Core</h2>
+          <p>EF Core is an ORM for .NET that lets you interact with databases using C# objects and LINQ.</p>
+        </div>
+
+        <div id="auth" class="note-card">
+          <h2>Authentication</h2>
+          <p>ASP.NET Core supports cookie auth, JWT bearer tokens, OAuth2, and OpenID Connect.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="./js/cursor.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+      const content = document.getElementById('asp-content');
+      const links = document.querySelectorAll('#asp-nav a');
+
+      function isMobile() {
+        return window.innerWidth <= 768;
+      }
+
+      // Smooth scroll on click
+      links.forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const id = link.getAttribute('href').slice(1);
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          if (isMobile()) {
+            // On mobile, scroll the window
+            const offset = target.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          } else {
+            // On desktop, scroll the content div
+            content.scrollTo({ top: target.offsetTop - 10, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Highlight active link on scroll
+      function updateActiveLink(scrollTop, scrollContainer) {
+        const cards = document.querySelectorAll('.note-card');
+        let active = cards[0].id;
+        cards.forEach(card => {
+          const cardTop = isMobile()
+            ? card.getBoundingClientRect().top + window.scrollY - 80
+            : card.offsetTop - content.offsetTop;
+          if (cardTop <= scrollTop + 80) {
+            active = card.id;
+          }
+        });
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + active);
+        });
+      }
+
+      // Desktop: content div scrolls
+      content.addEventListener('scroll', () => {
+        if (!isMobile()) updateActiveLink(content.scrollTop, content);
+      });
+
+      // Mobile: window scrolls
+      window.addEventListener('scroll', () => {
+        if (isMobile()) updateActiveLink(window.scrollY, window);
+      });
+    </script>
+</body>
+
+</html>
