@@ -8,6 +8,7 @@
 }
 
 body {
+    margin: 0px;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
@@ -188,7 +189,6 @@ body {
     }
 }
 
-
 /* ================= PRELOADER END ================= */
 
 
@@ -321,18 +321,23 @@ nav a:hover::after {
     display: none;
     position: absolute;
     top: 30px;
+    right: 0;
     background-color: #161b22;
     min-width: 220px;
+    max-width: 300px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     z-index: 100;
+    padding: 5px 0;
 }
 
 .dropdown-content a {
     display: block;
     padding: 12px 15px;
     border-bottom: 1px solid #222;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .dropdown-content a:hover {
@@ -615,7 +620,7 @@ nav a:hover::after {
 }
 
 #contact .icon {
-    width: 55px;
+    width: 45px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -627,7 +632,11 @@ nav a:hover::after {
 /* Responsive */
 @media (max-width: 768px) {
     .contact-item .icon {
-        width: 50px !important;
+        width: 40px !important;
+    }
+
+    .contact-item .icon-names {
+        font-size: 14px !important;
     }
 }
 
@@ -782,41 +791,43 @@ footer {
     background-image: linear-gradient(60deg, #0077ff 0%, #485563 100%);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0 20px;
+    width: 100%;
+    margin: 0;
 }
 
-#footer {
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
+/* Footer Container */
+footer .footer {
+    min-height: auto;
 }
 
-#footer .social-icon {
+/* Social Icons */
+footer .social-icon {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-#footer .social-item:hover {
+/* Social Item */
+footer .social-item {
+    width: 45px;
+    height: 45px;
+    transition: 0.3s ease;
+}
+
+footer .social-item:hover {
     transform: scale(1.15) rotate(-5deg);
 }
 
-#footer .social-item {
-    height: 50px;
-    width: 50px;
-}
-
-#footer .social-item img {
+/* Images */
+footer .social-item img {
     width: 100%;
     height: auto;
 }
 
-
+/* Copyright */
 footer p {
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 13px;
+    margin: 0;
 }
