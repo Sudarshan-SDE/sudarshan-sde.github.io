@@ -23,22 +23,27 @@
       <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
         <!-- Left side: Code -->
         <div class="star-pattern-code flex-fill p-3">
-          <h5>Code 1: (Reverse the Predefined string ->  Using For Loop)</h5>
+          <h5>Code 1: (Find Even Odd Number)</h5>
           <pre>
             <code>
 using System;
 
 class Program {
-    static void Main() {
-        string words = "Sudarshan Sharma";
-        string reversed = "";
+  static void Main() {
 
-        for (int i = words.Length - 1; i >= 0; i--)
-        {
-            reversed = reversed + words[i];
-        }
-        Console.WriteLine(reversed);
+    Console.Write("Enter the Number: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    
+    if (num % 2 == 0)
+    {
+      Console.WriteLine($"{num} is Even!");
     }
+    else
+    {
+      Console.WriteLine($"{num} is odd!");
+    }
+
+  }
 }
             </code>
           </pre>
@@ -48,7 +53,198 @@ class Program {
         <div class="star-pattern-output flex-fill p-3 rounded">
           <h5>Output</h5>
           <pre>
-Reversed String: amrahS nahsraduS
+Enter the Number: 8
+8 is Even!
+          </pre>
+        </div>
+      </div>
+
+      <!-- Card 2: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 2: (Find Largest of Three Numbers)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    int num1, num2, num3;
+
+    Console.Write("Enter the Number 1: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter the Number 2: ");
+    num2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter the Number 3: ");
+    num3 = Convert.ToInt32(Console.ReadLine());
+
+    if (num1 > num2 && num1 > num3)
+    {
+        Console.WriteLine($"{num1} is Largest");
+    }
+    else if (num2 > num1 && num2 > num3)
+    {
+        Console.WriteLine($"{num2} is Largest");
+    }
+    else
+    {
+        Console.WriteLine($"{num3} is Largest");
+    }
+    
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+Enter the Number 1: 5
+Enter the Number 2: 10
+Enter the Number 3: 3
+10 is Largest
+          </pre>
+        </div>
+      </div>
+
+      <!-- Card 3: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 3: (Swap Number Using 2 Variables)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    int num1, num2;
+
+    Console.Write("Enter the Number 1: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter the Number 2: ");
+    num2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"Before swaping: num1 is -> {num1} and num2 is -> {num2}");
+
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+
+    Console.WriteLine();
+    Console.WriteLine($"After swaping: num1 is -> {num1} and num2 is -> {num2}");
+        
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre> 
+Enter the Number 1: 5
+Enter the Number 2: 10  
+Before swaping: num1 is -> 5 and num2 is -> 10
+After swaping: num1 is -> 10 and num2 is -> 5
+          </pre>
+        </div>
+      </div>
+
+      <!-- Card 4: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 4: (Swap Number Using 3 Variables)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    int num1, num2, temp;
+
+    Console.Write("Enter the Number 1: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter the Number 2: ");
+    num2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"Before swaping: num1 is -> {num1} and num2 is -> {num2}");
+
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+    Console.WriteLine($"After swaping: num1 is -> {num1} and num2 is -> {num2}");
+        
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre> 
+Enter the Number 1: 5
+Enter the Number 2: 10  
+Before swaping: num1 is -> 5 and num2 is -> 10
+After swaping: num1 is -> 10 and num2 is -> 5
+          </pre>
+        </div>
+      </div>
+
+       <!-- Card 5: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 5: (Get Odd Number From Given Number Series)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    for (int i = 2; i <= 20; i++)
+    {
+        if (i % 2 != 0)
+        {
+            Console.WriteLine("The Odd Number are: " + i);
+        }
+    }
+        
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre> 
+The Odd Number are: 3
+The Odd Number are: 5
+The Odd Number are: 7
+The Odd Number are: 9
+The Odd Number are: 11
+The Odd Number are: 13
+The Odd Number are: 15
+The Odd Number are: 17
+The Odd Number are: 19
           </pre>
         </div>
       </div>
