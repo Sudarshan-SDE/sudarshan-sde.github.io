@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sudarshan Sharma - Full Stack .NET Developer</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+ <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header Section -->
+   <div id="header"></div>
+
+    <!-- String Programs Card -->
+    <section class="star-patterns-section container my-5">
+      <h2 class="text-center mb-4">String Programs (C#)</h2>
+
+      
+      <!-- Card 1: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 1: (Reverse the Predefined string ->  Using For Loop)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+    static void Main() {
+        string words = "Sudarshan Sharma";
+        string reversed = "";
+
+        for (int i = words.Length - 1; i >= 0; i--)
+        {
+            reversed = reversed + words[i];
+        }
+        Console.WriteLine(reversed);
+    }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre>
+Reversed String: amrahS nahsraduS
+          </pre>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="./js/cursor.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+
+</html>
