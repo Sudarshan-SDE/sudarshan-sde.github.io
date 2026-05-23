@@ -1,0 +1,102 @@
+/* Adjust 120px to match your header + footer combined height */
+.asp-container {
+    display: flex;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    background: #f4f6f9;
+}
+
+/* Sidebar */
+.asp-sidebar {
+    width: 260px;
+    min-width: 260px;
+    flex-shrink: 0;
+    background: #0f172a;
+    color: white;
+    position: sticky;
+    /* KEY FIX: was fixed, now sticky */
+    top: 0;
+    height: 100%;
+    /* scoped to container, not viewport */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.asp-sidebar h4 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.asp-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.asp-sidebar ul li {
+    margin-bottom: 6px;
+}
+
+.asp-sidebar ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    font-size: 14px;
+}
+
+.asp-sidebar ul li a:hover,
+.asp-sidebar ul li a.active {
+    background: #7c3aed;
+    color: white;
+}
+
+/* Right Content */
+.asp-content {
+    flex: 1;
+    /* KEY FIX: replaces margin-left: 260px */
+    height: 100%;
+    overflow-y: auto;
+    /* only content scrolls */
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+}
+
+/* Note Cards */
+.note-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h2 {
+    margin: 0 0 10px;
+    color: #0f172a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .asp-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .asp-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* sticky doesn't work well in column layout */
+    }
+
+    .asp-content {
+        height: auto;
+        overflow-y: visible;
+    }
+}
