@@ -229,7 +229,6 @@
 
     .asp-sidebar ul li a {
         padding: 6px 12px;
-        font-size: 12px;
         transform: none !important;
     }
 
@@ -244,7 +243,7 @@
     }
 
     .note-card h4,
-    h5 {
+    .note-card h5 {
         font-size: 16px;
     }
 
