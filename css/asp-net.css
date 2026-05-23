@@ -243,13 +243,14 @@
         padding: 20px;
     }
 
-    .note-card h4 {
+    .note-card h4,
+    h5 {
         font-size: 16px;
     }
 
     .note-card p,
-    .note-card ul {
-        font-size: 12px;
+    .note-card ul li {
+        font-size: 13.5px !important;
     }
 
     .note-card ul {
