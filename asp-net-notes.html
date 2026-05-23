@@ -26,7 +26,10 @@
         <ul id="asp-nav">
           <li><a href="#intro-of-net">Introduction of .NET</a></li>
           <li><a href="#key-features-of-net">Key Features of .NET</a></li>
-          <li><a href="#mvc">ASP.NET MVC</a></li>
+
+          <li><a href="#intro-of-asp-net-core">ASP.NET</a></li>
+          <li><a href="#differences-between-net-framework-and-asp-net-core">Differences between .NET Framework and ASP.NET Core</a></li>
+
           <li><a href="#core">ASP.NET Core</a></li>
           <li><a href="#routing">Routing</a></li>
           <li><a href="#middleware">Middleware</a></li>
@@ -40,7 +43,7 @@
       <div class="asp-content" id="asp-content">
 
         <div id="intro-of-net" class="note-card">
-          <h2>.NET</h2>
+          <h4>.NET</h4>
           <p>.NET is a free, open-source, cross-platform, modular, high performance and cloud-optimized developement platform 
             designed and developed by Microsoft to deliver productivity, performance and security for building modern,
             interactive, dynamic, cloud-enabled applications, Web APIs, microservices. It supports multiple languages, libraries, and 
@@ -61,62 +64,77 @@
         </div>
 
         <div id="key-features-of-net" class="note-card">
-          <h2>Key Features of .NET</h2>
+          <h4>Key Features of .NET</h4>
           <ul>
             <li><strong>Open Source:</strong> .NET Core is a free, open-source platform, meaning you can access the source code and contribute to its development.</li>
             <li><strong>Cross-Platform:</strong> .NET Core was designed from scratch to be cross-platform, running on Windows, Linux, and macOS.</li>
             <li><strong>High Performance:</strong> .NET Core was optimized for high performance, making it suitable for modern, scalable application development.</li>
             <li><strong>Long Term Support (LTS):</strong> .NET Core introduced LTS releases, providing a stable and supported platform for an extended period.</li>
+   
             <li><strong>MVC Architecture:</strong> .NET Core supports the Model-View-Controller design pattern for structured web application development.</li>
-
             <li><strong>Razor Views:</strong> Uses Razor syntax for building dynamic, server-rendered views.</li>
             <li><strong>Tag Helpers:</strong> Provides HTML tag helpers for generating clean, dynamic HTML content.</li>
-            <li><strong>Middleware Pipeline:</strong> .NET Core uses a middleware pipeline to handle HTTP requests and responses in a modular way.</li>
             <li><strong>Robust Security:</strong> .NET Core provides built-in features for authentication, authorization, and data protection.</li>
             <li><strong>Cloud Optimized:</strong> .NET Core is designed to be cloud-ready, with first-class support for containerization and microservices.</li>
-
             <li><strong>Garbage Collection:</strong> Provides automatic memory management via the CLR garbage collector.</li>
+
             <li><strong>Dependency Injection:</strong> .NET Core has a built-in DI container, promoting loosely coupled and testable code.</li>
+            <li><strong>Middleware Pipeline:</strong> .NET Core uses a middleware pipeline to handle HTTP requests and responses in a modular way.</li>
           </ul>
         </div>
 
-
-
-
-        
-        <div id="mvc" class="note-card">
-          <h2>ASP.NET MVC</h2>
-          <p>MVC stands for Model-View-Controller. It separates application logic into three components for better structure and maintainability.</p>
+        <div id="intro-of-asp-net-core" class="note-card">
+          <h4>ASP.NET Core</h4>
+          <p>ASP.NET Core is a web development framework provided by .NET used for building web applications, REST APIs, and micro-services.</p>
         </div>
+
+         <div id="differences-between-net-framework-and-asp-net-core" class="note-card">
+            <div class="row">
+                <h4>Difference between .NET Framework and ASP.NET Core</h4>
+                <div class="col-md-6">
+                    <h5 class="text-center">.NET Framework</h5>
+                    <ul>
+                        <li>.NET Framework is traditional and older framework.</li>
+                        <li>.Net Framework follows MVC design pattern.</li>
+                        <li>.Net Framework supports only Windows.</li>
+
+                        <li>.Net Framework introduced in 2002 as .NET Framework 1.0</li>
+                        <li>.Net Framework latest version is (4.8.1)</li>
+                        <li>.Net Framework is no longer supported.</li>
+
+                        <li>.Net Framework used for Win Forms, WPF, ASP.NET Web Forms, older enterprise apps.</li>
+                        <li>.Net Framework does not supports mobile development.</li>
+                        <li>.Net Framework is less scalable.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-center">.NET Core</h5>
+                    <ul>
+                        <li>.Net Core modern successor .Net framework.</li>
+                        <li>.Net Core also follows MVC design pattern.</li>
+                        <li>.Net Core is cross-platform.</li>
+
+                        <li>.Net Core introduced in 2016 as .NET Core 1.0</li>
+                        <li>.Net Core uses latest version (.NET 6, .NET 8, .NET 9)</li>
+                        <li>.Net Core is long-term support.</li>
+
+                        <li>.Net Core used for Web APIs.MVC Apps, Micro services, Cloud apps etc.</li>
+                        <li>.Net Core supports mobile development.</li>
+                        <li>.Net Core is high scalable.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
 
         <div id="core" class="note-card">
           <h2>ASP.NET Core</h2>
           <p>ASP.NET Core is a cross-platform, high-performance framework for building modern web apps and APIs.</p>
-        </div>
-
-        <div id="routing" class="note-card">
-          <h2>Routing</h2>
-          <p>Routing maps URLs to controllers and actions in ASP.NET applications.</p>
-        </div>
-
-        <div id="middleware" class="note-card">
-          <h2>Middleware</h2>
-          <p>Middleware is a pipeline component that handles requests and responses in ASP.NET Core.</p>
-        </div>
-
-        <div id="webapi" class="note-card">
-          <h2>Web API</h2>
-          <p>ASP.NET Core Web API lets you build RESTful HTTP services with automatic model validation.</p>
-        </div>
-
-        <div id="efcore" class="note-card">
-          <h2>Entity Framework Core</h2>
-          <p>EF Core is an ORM for .NET that lets you interact with databases using C# objects and LINQ.</p>
-        </div>
-
-        <div id="auth" class="note-card">
-          <h2>Authentication</h2>
-          <p>ASP.NET Core supports cookie auth, JWT bearer tokens, OAuth2, and OpenID Connect.</p>
         </div>
 
       </div>
