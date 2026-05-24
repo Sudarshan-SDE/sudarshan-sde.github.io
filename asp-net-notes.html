@@ -26,16 +26,12 @@
         <ul id="asp-nav">
           <li><a href="#intro-of-net">Introduction of .NET</a></li>
           <li><a href="#key-features-of-net">Key Features of .NET</a></li>
-
           <li><a href="#intro-of-asp-net-core">ASP.NET</a></li>
           <li><a href="#differences-between-net-framework-and-asp-net-core">Differences between .NET Framework and ASP.NET Core</a></li>
-
           <li><a href="#mvc">Model-View-Controller</a></li>
-          <li><a href="#routing">Routing</a></li>
           <li><a href="#middleware">Middleware</a></li>
-          <li><a href="#webapi">Web API</a></li>
-          <li><a href="#efcore">Entity Framework Core</a></li>
-          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#dependency-injection">Dependency Injection</a></li>
+          <li><a href="#service-lifetime">Service Lifetimes</a></li>
         </ul>
       </aside>
 
@@ -141,14 +137,50 @@
             </ul>
         </div>
 
-
-
-
-
-        <div id="core" class="note-card">
-          <h2>ASP.NET Core</h2>
-          <p>ASP.NET Core is a cross-platform, high-performance framework for building modern web apps and APIs.</p>
+        <div id="middleware" class="note-card">
+          <h4>Middleware</h4>
+          <p>.NET introduced a new concept called Middleware. Middlewares are the software components that provides services. 
+            In ASP.NET Core, middleware components are used to handle HTTP requests and responses in the request processing pipeline.
+            Middleware sits between the incoming request and the outgoing response.
+          </p>
+          <ul>
+                <li>app.UseExceptionHandler("/Error/500");</li>
+                <li>app.UseHttpsRedirection();</li>
+                <li>app.UseStaticFiles();</li>
+                <li>app.UseRouting();</li>
+                <li>app.UseAuthentication();</li>
+                <li>app.UseAuthorization();</li>
+                <li>app.UseEndpoints(endpoints => { endpoints.MapControllers(); });</li>
+            </ul>
         </div>
+
+        <div id="dependency-injection" class="note-card">
+          <h4>Dependency Injection</h4>
+          <p>Dependency Injection (DI) is a design pattern that allows us to remove hard-coded dependencies and make our applications more flexible and maintainable. 
+            Dependency Injection is a design pattern by injecting dependencies to a class from outside instead of the class creating them itself, helping to achieve loose coupling and better testability.
+          </p>
+          <ul>
+                <li>Loose Coupling</li>
+                <li>Easy Unit Testing</li>
+                <li>Better Maintainability</li>
+                <li>builder.Services.AddScoped<IEmployee, EmployeeServices>();</li>
+            </ul>
+        </div>
+
+        <div id="service-lifetime" class="note-card">
+          <h4>Service Lifetimes</h4>
+          <p>Service Lifetime defines how long a service instance lives and how it is reused by the Dependency Injection container.</p>
+          <ul>
+                <li>Transient -> A new instance of the service is created every time it is requested from the dependency injection container.<br>
+                builder.Services.AddTransient<IMyService, MyService>();
+                </li>
+                <li>Scoped -> A single instance of the service is created per HTTP request and shared within that request.<br>
+                builder.Services.AddScoped<IMyService, MyService>();
+                <li>Singleton -> Only one instance of the service is created for the entire application lifetime and reused everywhere.<br>
+                builder.Services.AddSingleton<IMyService, MyService>();
+            </ul>
+        </div>
+
 
       </div>
     </section>
