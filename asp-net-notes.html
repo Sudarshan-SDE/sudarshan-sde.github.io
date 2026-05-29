@@ -26,12 +26,29 @@
         <ul id="asp-nav">
           <li><a href="#intro-of-net">Introduction of .NET</a></li>
           <li><a href="#key-features-of-net">Key Features of .NET</a></li>
-          <li><a href="#intro-of-asp-net-core">ASP.NET</a></li>
+          <li><a href="#intro-of-asp-net-core">ASP.NET Core</a></li>
           <li><a href="#differences-between-net-framework-and-asp-net-core">Differences between .NET Framework and ASP.NET Core</a></li>
+          
           <li><a href="#mvc">Model-View-Controller</a></li>
           <li><a href="#middleware">Middleware</a></li>
           <li><a href="#dependency-injection">Dependency Injection</a></li>
           <li><a href="#service-lifetime">Service Lifetimes</a></li>
+          <li><a href="#kestral">Kestrel Web Server</a></li>
+          <li><a href="#appsettings-json">App Settings (appsettings.json)</a></li>
+          <li><a href="#routing">Routing</a></li>
+
+          <li><a href="#controller">Controller</a></li>
+          <li><a href="#action-method">Action Method</a></li>
+          <li><a href="#iactionresult-and-actionresult">IActionResult and ActionResult</a></li>
+          <li><a href="#view">View</a></li>
+          
+          <li><a href="#model">Model</a></li>
+          <li><a href="#model-binding">Model Binding</a></li>
+          <li><a href="#razor-view">Razor View</a></li>
+          <li><a href="#razor-view-engine">Razor View Engine</a></li>
+
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#view-start">View Start</a></li>
         </ul>
       </aside>
 
@@ -122,13 +139,15 @@
             </div>
         </div>
 
+
+
         <div id="mvc" class="note-card">
           <h4>Model-View-Controller (MVC)</h4>
           <p>MVC stands for Model-View-Controller. It is an architectural design pattern. This pattern helps to achieve separation
              of concerns. The entire application is divided into three main components -> Models, Views, and Controllers. <br>
-             <b>The model contains the business logic entities and handles data.</b><br> 
-             <b>The View contains the UI Presentation logic.</b><br>
-             <b>The Controller is a mediator, it handles HTTP requests and returns responses.</b>
+             <b> - The model contains the business logic entities and handles data.</b><br> 
+             <b> - The View contains the UI Presentation logic.</b><br>
+             <b> - The Controller is a mediator, it handles HTTP requests and returns responses.</b>
             </p>
             <ul>
                 <li>Separation of concern</li>
@@ -163,7 +182,7 @@
                 <li>Loose Coupling</li>
                 <li>Easy Unit Testing</li>
                 <li>Better Maintainability</li>
-                <li>builder.Services.AddScoped<IEmployee, EmployeeServices>();</li>
+                <li>builder.Services.AddScoped();</li>
             </ul>
         </div>
 
@@ -181,6 +200,138 @@
             </ul>
         </div>
 
+         <div id="kestrel" class="note-card">
+          <h4>Kestrel Web Server</h4>
+          <p>Kestrel is a cross-platform web server for ASP.NET Core applications. 
+            It is the default web server for ASP.NET Core applications and is optimized for high-performance scenarios.</p>
+        </div>
+
+        <div id="appsettings-json" class="note-card">
+          <h4>App Settings (appsettings.json)</h4>
+          <p>appsettings.json stores application configuration settings such as connection strings, JWT, logging settings, and custom configuration.</p>
+        </div>
+
+         <div id="routing" class="note-card">
+          <h4>Routing</h4>
+          <p>Routing is the mechanism that maps HTTP requests to the appropriate endpoints, such as controller actions, Razor Pages, or other request handlers.
+            <br>
+            There are two types of routing: <br>
+            <strong>Conventional Routing:</strong> Conventional Routing refers to a routing mechanism where URL patterns are centrally defined. This routing follows a standard convention, typically defined in the program.cs file.<br>
+            <strong>Attribute Routing:</strong> Attribute Routing refers to a routing mechanism where URL patterns are defined as attributes on the action methods. This routing provides more flexibility and control over the URL structure.
+            </p>
+        </div>
+
+
+
+        <div id="controller" class="note-card">
+          <h4>Controller</h4>
+          <p>A Controller is a class that handles incoming HTTP requests and returns response. It acts as a mediator between business logic and presentation layer.<br>
+             Controller contains Action methods that process requests.<br>
+             Controllers inherit from the Controller Base Class provided by the Microsoft.AspNetCore.Mvc namespaces.</p>
+        </div>
+
+        <div id="action-method" class="note-card">
+          <h4>Action Method</h4>
+          <p>An Action Methods are the public methods within a Controller that handles a specific HTTP request and returns an appropriate response.
+            <br>Action Methods can return various types of responses, such as views, JSON data, or status codes, depending on the requirements of the application.
+            <br>Note: Action Methods must be public and cannot be static.</p>
+          </p>
+        </div>
+
+         <div id="iactionresult-and-actionresult" class="note-card">
+          <h4>IActionResult and ActionResult</h4>
+          <p><strong>IActionResult</strong> is an interface that allows returning different types of results such as ViewResult, JsonResult, ContentResult, RedirectResult, etc.</p>
+
+    <pre class="bg-light p-3 rounded">
+public IActionResult Index()
+{
+    return View();
+}
+
+public IActionResult GetData()
+{
+    return Json(new { name = "Sudarshan" });
+}
+
+public IActionResult RedirectPage()
+{
+    return RedirectToAction("Index");
+}
+    </pre>
+            
+           <p><strong>ActionResult</strong> is a class that implements IActionResult and provides a convenient way to return different types of responses from an action method.</p>
+            <pre class="bg-light p-3 rounded">
+public ActionResult About()
+{
+    return View();
+}
+    </pre>
+         </div>
+         
+         <div id="view" class="note-card">
+          <h4>View</h4>
+          <p>View is the user interface of the application to the user. View is used to display the content of an application.</p>
+        </div>
+
+
+        
+        <div id="model" class="note-card">
+          <h4>Model</h4>
+          <p>The Model is a class that represents the entities and business logic of the application.</p>
+           <pre>
+public class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Department { get; set; }
+}
+    </pre>
+        </div>
+
+        <div id="model-binding" class="note-card">
+          <h4>Model Binding</h4>
+          <p>Model Binding is the process of mapping HTTP request data to action method parameters or properties of a model object.</p>
+           <pre>
+[HttpPost]
+public IActionResult Login(LoginModel model)
+{
+    if(ModelState.IsValid)
+    {
+        return View();
+    }
+    return View(model);
+}
+    </pre>
+        </div>
+        
+        <div id="razor-view" class="note-card">
+          <h4>Razor View</h4>
+          <p>Razor is a markup syntax for embedding server-based code into web pages. 
+            Razor views use the <code>.cshtml</code> extension and allow you to create dynamic HTML content.</p>
+            <pre>
+@{
+    ViewBag.Title = "Home Page";
+}
+<p>Today Date: @DateTime.Now</p>
+    </pre>
+        </div>  
+        
+        <div id="razor-view-engine" class="note-card">
+          <h4>Razor View Engine</h4>
+          <p>The Razor View Engine is responsible for processing Razor views and converting Razor syntax into HTML output.</p>
+        </div>  
+
+
+
+        <div id="layout" class="note-card">
+          <h4>Layout</h4>
+          <p>A Layout View is used to define the common structure of the application.</p>
+        </div>  
+
+        <div id="view-start" class="note-card">
+          <h4>View Start</h4>
+          <p>A View Start file is used to define the default layout for all views in the application.</p>
+        </div>  
 
       </div>
     </section>
