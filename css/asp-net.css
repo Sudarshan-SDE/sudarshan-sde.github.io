@@ -119,7 +119,8 @@
 
 /* Note Cards */
 .note-card {
-    background: white;
+    /* background: white; */
+    background: linear-gradient(to right, #d1d8e2, #acceea, #a9eeea);
     padding: 28px 30px;
     margin-bottom: 24px;
     border-radius: 16px;
