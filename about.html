@@ -209,30 +209,30 @@
     <script src="./js/script.js"></script>
     
 
-    <button id="scrollTopBtn" title="Back to Top">
+   <button id="scrollTopBtn" title="Back to Top">
     <i class="fas fa-chevron-up"></i>
+   </button>
 
-        <script>
+         <script>
             const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-// Show button after scrolling
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollTopBtn.classList.add("show");
-    } else {
-        scrollTopBtn.classList.remove("show");
-    }
-});
-
-// Smooth scroll to top
-scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+            // Show button after scrolling
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add("show");
+                } else {
+                    scrollTopBtn.classList.remove("show");
+                }
+            });
+            
+            // Smooth scroll to top
+            scrollTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
         </script>
-</button>
 </body>
 
 </html>
