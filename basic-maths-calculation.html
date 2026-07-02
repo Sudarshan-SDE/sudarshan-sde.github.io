@@ -16,7 +16,7 @@
 
     <!-- String Programs Card -->
     <section class="star-patterns-section container my-5">
-      <h2 class="text-center mb-4">String Programs (C#)</h2>
+      <h4 class="text-center mb-3">Basic Maths Programs (C#)</h4>
 
       
       <!-- Card 1: -->
@@ -206,7 +206,7 @@ After swaping: num1 is -> 10 and num2 is -> 5
         </div>
       </div>
 
-       <!-- Card 5: -->
+      <!-- Card 5: -->
       <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
         <!-- Left side: Code -->
         <div class="star-pattern-code flex-fill p-3">
@@ -245,6 +245,88 @@ The Odd Number are: 13
 The Odd Number are: 15
 The Odd Number are: 17
 The Odd Number are: 19
+          </pre>
+        </div>
+      </div>
+
+      <!-- Card 6: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 6: (Reverse the Number)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    int num, reversed = 0, rem;
+
+    Console.Write("Enter the Number: ");
+    num = Convert.ToInt32(Console.ReadLine());
+
+    while (num != 0)
+    {
+        rem = num % 10;
+        reversed = reversed * 10 + rem;
+        num = num / 10;
+    }
+    Console.Write("Reversed Number: " + reversed);
+        
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre> 
+Enter the Number: 1234        
+Reversed Number: 4321
+          </pre>
+        </div>
+      </div>
+
+      <!-- Card 7: -->
+      <div class="star-pattern-card d-flex flex-wrap mb-4 rounded">
+        <!-- Left side: Code -->
+        <div class="star-pattern-code flex-fill p-3">
+          <h5>Code 7: (Sum of Numbers)</h5>
+          <pre>
+            <code>
+using System;
+
+class Program {
+  static void Main() {
+
+    int num, reversed = 0, rem;
+
+    Console.Write("Enter the Number: ");
+    num = Convert.ToInt32(Console.ReadLine());
+
+    while (num != 0)
+    {
+        rem = num % 10;
+        reversed = reversed + rem;
+        num = num / 10;
+    }
+    Console.Write("Sum of Numbers: " + reversed);
+        
+  }
+}
+            </code>
+          </pre>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="star-pattern-output flex-fill p-3 rounded">
+          <h5>Output</h5>
+          <pre> 
+Enter the Number: 1234        
+Sum of Numbers: 10
           </pre>
         </div>
       </div>
