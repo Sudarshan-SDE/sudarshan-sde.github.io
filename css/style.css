@@ -728,7 +728,8 @@ nav a:hover::after {
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: linear-gradient(to right, #d1d8e2, #acceea, #a9eeea);
     /* ensures shadow shows nicely */
 }
 
@@ -740,7 +741,9 @@ nav a:hover::after {
 
 /* Code block styling */
 .star-pattern-code pre {
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
+    /* background-color: #032540; */
+    background: linear-gradient(to right, #032540, #161b22);
     color: #d4d4d4;
     padding: 10px;
     border-radius: 5px;
